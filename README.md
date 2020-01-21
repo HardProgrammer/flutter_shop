@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # shop
 
 A new Flutter project.
@@ -17,5 +16,3 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 =======
 # flutter_shop
-flutter商城
->>>>>>> f221682dcbbbc436f956f664ae64e61ab642c20b
