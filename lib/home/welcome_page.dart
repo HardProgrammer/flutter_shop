@@ -10,6 +10,8 @@ class WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return null;
+    return Container(
+      child: Text("HelloWorld"),
+    );
   }
 }
