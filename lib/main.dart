@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:shop/home/welcome_page.dart';
+import 'package:flutter_amap/flutter_amap.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  // IOS高德地图Key
+  FlutterAmap.setApiKey("9787418a5e9fc7157e825563e389ef86");
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.

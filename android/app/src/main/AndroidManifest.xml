@@ -26,5 +26,9 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <!-- 设置高德地图key-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="104cbfbbe0c12d4eab8058e68398f227" />
     </application>
 </manifest>
