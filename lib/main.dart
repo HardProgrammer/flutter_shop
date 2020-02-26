@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:shop/home/home_page.dart';
 import 'package:shop/home/welcome_page.dart';
-import 'package:flutter_amap/flutter_amap.dart';
+import 'package:amap_all_fluttify/amap_all_fluttify.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   // IOS高德地图Key
-  FlutterAmap.setApiKey("9787418a5e9fc7157e825563e389ef86");
+  await AmapCore.init('9787418a5e9fc7157e825563e389ef86');
+  // 关闭log
+  await enableFluttifyLog(false);
+  // 强制竖屏
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   runApp(MyApp());
 }
 
@@ -13,7 +22,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      // 去除右上角debug图标
+      debugShowCheckedModeBanner: false,
+
+      title: 'thinkerShop',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -26,7 +38,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: WelcomePage(),
+      home: HomePage(),
     );
   }
 }

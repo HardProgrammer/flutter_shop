@@ -25,7 +25,11 @@ dependencies:
   cupertino_icons: ^0.1.2
 
   # 高德地图
-  flutter_amap: ^0.0.1
+  amap_all_fluttify: ^0.11.1
+  # 权限处理程序插件
+  permission_handler: ^4.2.0+hotfix.3
+  # 流播放
+  fijkplayer: ^0.5.2
 
 dev_dependencies:
   flutter_test:

@@ -1,4 +1,6 @@
 /// 整合页面
-import "home/home_page.dart";
-import "home/welcome_page.dart";
-import "home/login_page.dart";
+export "home/home_page.dart";
+export "home/welcome_page.dart";
+export "home/login_page.dart";
+export "home/map_page.dart";
+export "home/register_page.dart";

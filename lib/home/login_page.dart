@@ -9,7 +9,8 @@ class LoginPage extends StatefulWidget {
 class LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return null;
+    return Container(
+      child: Text("LoginPage"),
+    );
   }
 }

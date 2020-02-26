@@ -39,6 +39,18 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>io.flutter.embedded_views_preview</key>
+    <string>YES</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+    	<string>iosamap</string>
+    </array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+        <string>需要用到定位功能</string>
+        <key>UIBackgroundModes</key>
+    <array>
+        <string>location</string>
+    </array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>
