@@ -32,7 +32,6 @@ class WelcomePageState extends State<WelcomePage> {
 
     /// 主页面
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Stack(
         alignment: Alignment.topCenter,
         children: <Widget>[
@@ -49,17 +48,11 @@ class WelcomePageState extends State<WelcomePage> {
                 alignment: Alignment.center,
                 children: <Widget>[
                   // 圆形进度条
-                  FloatingActionButton(
-                    backgroundColor: Colors.white,
-                    onPressed: () {
-                      print("跳过");
-                    },
-                    child: CircularProgressIndicator(
-                      strokeWidth: 2.0,
-                      value: downCount / 10,
-                      backgroundColor: Colors.blue,
-                      valueColor: AlwaysStoppedAnimation<Color>(Colors.orange),
-                    ),
+                  CircularProgressIndicator(
+                    strokeWidth: 2.0,
+                    value: downCount / 10,
+                    backgroundColor: Colors.blue,
+                    valueColor: AlwaysStoppedAnimation<Color>(Colors.orange),
                   ),
                   Center(
                     child: Text(
