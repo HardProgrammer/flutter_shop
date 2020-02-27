@@ -14,7 +14,7 @@ class RegisterPageState extends State<RegisterPage> {
   @override
   void initState() {
     super.initState();
-    player.setDataSource("rtmp://video.witbee.cn/live/stream1?token=e38b258613faea32975b962152d93e09&videoId=1&userId=1&key=281a36a7f8f34ba7a42a95637ec73003", autoPlay: true);
+    player.setDataSource("rtmp://video.witbee.cn/live/stream1?token=6bb2e49ff99fc11265f2558908e23414&videoId=1&userId=1&key=281a36a7f8f34ba7a42a95637ec73003", autoPlay: true);
   }
 
   @override

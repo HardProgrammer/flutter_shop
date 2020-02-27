@@ -1,7 +1,6 @@
 /// 首页
 import 'package:flutter/material.dart';
 import 'package:shop/page_index.dart';
-import 'package:shop/utils/global_utils.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -27,8 +26,6 @@ class HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, width: 1125, height: 2436);
-
     return Scaffold(
       body: _bottomNavPages[_selectedIndex],
       bottomNavigationBar: BottomAppBar(
