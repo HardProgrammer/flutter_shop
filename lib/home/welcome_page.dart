@@ -42,8 +42,10 @@ class WelcomePageState extends State<WelcomePage> {
           Positioned(
             top: RDimen.dpH(100),
             right: RDimen.dpH(100),
-            child: Container(
-              color: Colors.white,
+            child: FlatButton(
+              onPressed: () {
+                _goHome();
+              },
               child: Stack(
                 alignment: Alignment.center,
                 children: <Widget>[
