@@ -1,6 +1,7 @@
 /// 首页
 import 'package:flutter/material.dart';
 import 'package:shop/page_index.dart';
+import 'package:shop/res/dimen.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -20,60 +21,38 @@ class HomePageState extends State<HomePage> {
     _bottomNavPages
       ..add(MapPage())
       ..add(LoginPage())
-      ..add(WelcomePage())
-      ..add(RegisterPage());
+      ..add(VideoPage())
+      ..add(MinePage());
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: _bottomNavPages[_selectedIndex],
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.teal,
-        child: Row(
-          children: <Widget>[
-            IconButton(
-              icon: Icon(
-                Icons.home,
-                color: Colors.white,
-              ),
-              onPressed: () => _onItemTapped(0),
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.shop,
-                color: Colors.white,
-              ),
-              onPressed: () => _onItemTapped(1),
-            ),
-            SizedBox(), // 增加一些间隔
-            IconButton(
-              icon: Icon(
-                Icons.school,
-                color: Colors.white,
-              ),
-              onPressed: () => _onItemTapped(2),
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.people,
-                color: Colors.white,
-              ),
-              onPressed: () => _onItemTapped(3),
-            ),
-          ],
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-        ),
-        shape: CircularNotchedRectangle(),
+      bottomNavigationBar: BottomNavigationBar(
+        iconSize: 30,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              title: Text('首页'),
+              backgroundColor: Colors.lightBlue),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shop),
+              title: Text('商城'),
+              backgroundColor: Colors.lightBlue),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.school),
+              title: Text('课程'),
+              backgroundColor: Colors.lightBlue),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.people),
+              title: Text('我的'),
+              backgroundColor: Colors.lightBlue),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.teal,
+        onTap: _onItemTapped,
       ),
-
-      /// 悬浮按钮
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.phone),
-      ),
-      // 设置 floatingActionButton 在底部导航栏中间
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 

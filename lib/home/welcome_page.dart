@@ -3,6 +3,8 @@ import 'dart:async';
 /// 屏幕启动页
 import 'package:flutter/material.dart';
 import 'package:shop/res/dimen.dart';
+import 'package:shop/routes/application.dart';
+import 'package:shop/routes/routes.dart';
 import 'package:shop/utils/global_utils.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -41,7 +43,7 @@ class WelcomePageState extends State<WelcomePage> {
           /// 跳过按钮--点击页面跳转
           Positioned(
             top: RDimen.dpH(100),
-            right: RDimen.dpH(100),
+            right: RDimen.dpH(50),
             child: FlatButton(
               onPressed: () {
                 _goHome();
@@ -83,9 +85,7 @@ class WelcomePageState extends State<WelcomePage> {
           /// 时间结束页面跳转
           _goHome();
         } else {
-          setState(() {
-            print("倒计时：$count");
-          });
+          setState(() {});
         }
       });
       return _timer;
@@ -95,7 +95,14 @@ class WelcomePageState extends State<WelcomePage> {
   /// 设置页面跳转
   _goHome() {
     _timer?.cancel();
-    print("跳过");
+
+    /// 判断token是否过期--过期就跳转到登陆页面
+    Application.router
+        .navigateTo(context, Routes.home, clearStack: true)
+        .then((result) {
+      //回传值
+      if (result != null) {}
+    });
   }
 
   @override

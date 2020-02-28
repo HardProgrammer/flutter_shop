@@ -1,8 +1,10 @@
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:shop/home/home_page.dart';
 import 'package:shop/home/welcome_page.dart';
 import 'package:amap_all_fluttify/amap_all_fluttify.dart';
+import 'package:shop/routes/application.dart';
+import 'package:shop/routes/routes.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,6 +16,10 @@ Future<void> main() async {
   // 强制竖屏
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  //初始化路由
+  final router = new Router();
+  Routes.configureRoutes(router);
+  Application.router = router;
   runApp(MyApp());
 }
 
@@ -39,6 +45,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: WelcomePage(),
+      //初始化路由
+      onGenerateRoute: Application.router.generator,
     );
   }
 }
