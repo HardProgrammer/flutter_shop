@@ -45,8 +45,10 @@ class MapPageState extends State<MapPage> {
           if (await requestPermission()) {
             final location = await AmapLocation.fetchLocation();
             setState(() => _location = location);
-            await controller.showMyLocation(true,
-                strokeColor: Colors.transparent, fillColor: Colors.transparent);
+            await controller.showMyLocation(MyLocationOption(
+                show: true,
+                strokeColor: Colors.transparent,
+                fillColor: Colors.transparent));
           }
         },
       ),
@@ -92,9 +94,10 @@ class MapPageState extends State<MapPage> {
             onPressed: () async {
               /// 获取当前信息
               if (await requestPermission()) {
-                await _controller.showMyLocation(true,
+                await _controller.showMyLocation(MyLocationOption(
+                    show: true,
                     strokeColor: Colors.transparent,
-                    fillColor: Colors.transparent);
+                    fillColor: Colors.transparent));
               }
             },
           ),

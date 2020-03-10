@@ -11,7 +11,7 @@ class VideoPage extends StatefulWidget {
 
 class VideoPageState extends State<VideoPage> {
   final FijkPlayer player = FijkPlayer();
-  String rtmpAddress = "rtmp://58.200.131.2:1935/livetv/hunantv";
+  String rtmpAddress = "rtmp://video.witbee.cn/live/stream1?token=c708dce603462cbf0a764d6e30969d9d&videoId=1&userId=1&key=281a36a7f8f34ba7a42a95637ec73003";
   @override
   void initState() {
     super.initState();
