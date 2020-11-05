@@ -1,7 +1,6 @@
 /// 首页
 import 'package:flutter/material.dart';
 import 'package:shop/page_index.dart';
-import 'package:shop/res/dimen.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -21,7 +20,6 @@ class HomePageState extends State<HomePage> {
     _bottomNavPages
       ..add(MapPage())
       ..add(LoginPage())
-      ..add(VideoPage())
       ..add(MinePage());
   }
 
@@ -34,19 +32,12 @@ class HomePageState extends State<HomePage> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
               icon: Icon(Icons.home),
-              title: Text('首页'),
               backgroundColor: Colors.lightBlue),
           BottomNavigationBarItem(
               icon: Icon(Icons.shop),
-              title: Text('商城'),
-              backgroundColor: Colors.lightBlue),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.school),
-              title: Text('课程'),
               backgroundColor: Colors.lightBlue),
           BottomNavigationBarItem(
               icon: Icon(Icons.people),
-              title: Text('我的'),
               backgroundColor: Colors.lightBlue),
         ],
         currentIndex: _selectedIndex,
@@ -61,5 +52,10 @@ class HomePageState extends State<HomePage> {
     setState(() {
       _selectedIndex = index;
     });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
   }
 }

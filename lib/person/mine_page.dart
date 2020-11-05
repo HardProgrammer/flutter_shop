@@ -9,6 +9,16 @@ class MinePage extends StatefulWidget {
 
 class MinePageState extends State<MinePage> {
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       child: Text("MinePage"),

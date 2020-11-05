@@ -19,7 +19,7 @@ class Routes {
   static String mine_info = "/mine_info_page";
 
 
-  static void configureRoutes(Router router) {
+  static void configureRoutes(FluroRouter router) {
     router.define(no_found, transitionType: TransitionType.inFromRight, handler: noFoundHandler);
 
     router.define(root, transitionType: TransitionType.inFromRight,handler: welcomeHandler);

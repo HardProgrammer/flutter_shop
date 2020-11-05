@@ -15,16 +15,16 @@ class RegisterPageState extends State<RegisterPage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(),
         body: Container(
           child: Text("hello"),
         ));
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
   }
 }
