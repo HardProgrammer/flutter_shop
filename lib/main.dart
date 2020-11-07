@@ -1,17 +1,11 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:shop/routes/application.dart';
-import 'package:shop/routes/routes.dart';
 
 void main() {
   // 强制竖屏
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
-  //初始化路由
-  final router = new FluroRouter();
-  Routes.configureRoutes(router);
-  Application.router = router;
   runApp(MyApp());
 }
 

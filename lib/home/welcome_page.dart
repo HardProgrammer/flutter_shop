@@ -2,8 +2,6 @@ import 'dart:async';
 
 /// 屏幕启动页
 import 'package:flutter/material.dart';
-import 'package:shop/routes/application.dart';
-import 'package:shop/routes/routes.dart';
 
 class WelcomePage extends StatefulWidget {
   @override
