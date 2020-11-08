@@ -1,13 +1,12 @@
-/// 个人中心主页
-
 import 'package:flutter/material.dart';
 
-class MinePage extends StatefulWidget {
+/// 登录页
+class LoginPage extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => MinePageState();
+  State<StatefulWidget> createState() => LoginPageState();
 }
 
-class MinePageState extends State<MinePage> {
+class LoginPageState extends State<LoginPage> {
   @override
   void initState() {
     super.initState();
@@ -21,7 +20,7 @@ class MinePageState extends State<MinePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("MinePage"),
+      child: Text("LoginPage"),
     );
   }
 }

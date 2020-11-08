@@ -1,6 +1,6 @@
-/// 注册页
 import 'package:flutter/material.dart';
 
+/// 注册页
 class RegisterPage extends StatefulWidget {
 
   @override

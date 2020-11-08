@@ -1,7 +1,6 @@
-/// 页面不存在
-
 import 'package:flutter/material.dart';
 
+/// 页面不存在
 class NoFoundPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => NoFoundPageState();
